@@ -45,7 +45,7 @@ REM If the user directory doesn't exists ==> Start installation
 if not exist %QGIS_UDIR% goto install
 
 REM Run the central update commmandfile if the variable is set to a location and the file exist.
-if not *%QGIS_NETCMD%==* if exist %QGIS_NETCMD% call %QGIS_NETCMD%
+if not *%QGIS_NETCMD%==* exist %QGIS_NETCMD% call %QGIS_NETCMD%
 
 REM  Exit and run QGIS in "RUN" mode
 exit /b
